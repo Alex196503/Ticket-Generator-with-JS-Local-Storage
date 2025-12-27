@@ -50,7 +50,7 @@ document.addEventListener(('DOMContentLoaded'),()=>{
         {
             let file = inputFile.files[0].name;
             sessionStorage.setItem('FileImage', file);
-         window.location.replace(`http://localhost:3000/mobileticket.html?name=${encodeURIComponent(nameInput.value)}&email=${encodeURIComponent(emailInput.value)}&username=${encodeURIComponent(usernameInput.value)}`);         
+         window.location.replace(`mobileticket.html?name=${encodeURIComponent(nameInput.value)}&email=${encodeURIComponent(emailInput.value)}&username=${encodeURIComponent(usernameInput.value)}`);         
         }
     })
     function updateForm (box) 
