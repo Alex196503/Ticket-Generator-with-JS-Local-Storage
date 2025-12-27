@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket generator</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <img src="images/logo-full.svg" alt="Icon with the logo">
+        <div class="wrapper">
+        <h1 class="lead">Your Journey to Coding Conf 2025 Starts Here!</h1>
+        </div>
+        <div class="wrapper-paragraph">
+        <p class="text-primary">Secure your spot at next year's biggest coding conference.</p>
+        </div>
+    </header>
+    <main class="container">
+        <div class="container-fluid">
+            <form novalidate>
+            <label for="uploading-avatar">Upload Avatar</label>
+            <div class="box" id="file">
+                <div class="wrapper-image">
+                <img class="img-fluid" src="images/icon-upload.svg" alt="Image with uploading something">
+                </div>
+                <input type="file" aria-describedby="fileArea" id="uploading-avatar" name="file" accept="image/jpg, image/png">
+                <h3 class="text-primary">Drag and drop or click to upload</h3>
+                <div class="container-btn hidden">
+                    <button type="button" class="btn-change bordered" aria-label="Button to remove images">Remove image</button>
+                    <button type="button" class="btn-change" aria-label="Button to change the image you put it initially">Change image</button>
+                </div>
+            </div>
+            <section id="fileArea" class="section" aria-live="polite">
+            <svg id="fileSVG" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"/><path fill="currentColor" d="M8.004 10.462V7.596ZM8 5.57v-.042Z"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M8.004 10.462V7.596M8 5.569v-.042"/></svg>
+            <h3 id="fileError" class="text-heading">Upload your photo (JPG or PNG, max size: 500KB).</h3>
+            </section>
+            <div id="full-name" class="box-area">
+            <label for="fullName">Full Name</label>
+            <input type="text" aria-describedby="NameError" name="fullname" id="fullName" class="fullName" value="">
+            <section id="NameError" class="section hidden" aria-live="polite">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"/><path fill="currentColor" d="M8.004 10.462V7.596ZM8 5.57v-.042Z"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M8.004 10.462V7.596M8 5.569v-.042"/></svg>
+                <h3 class="text-heading"></h3>
+            </section>
+            </div>
+            <div class="box-area" id="emailContainer">
+            <label for="Email">Email Address</label>
+            <input type="email" autocomplete="email" aria-describedby="EmailError" id="Email" name="emailaddress" value="" placeholder="example@email.com">
+            <section class="section hidden" id="EmailError" aria-live="polite">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"/><path fill="currentColor" d="M8.004 10.462V7.596ZM8 5.57v-.042Z"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M8.004 10.462V7.596M8 5.569v-.042"/></svg>
+                <h3 class="text-heading">Upload your photo (JPG or PNG, max size: 500KB).</h3>
+            </section>
+        </div>
+            <div class="box-area" id="username">
+            <label for="githubUsername">GitHub Username</label>
+            <input type="text" name="username" id="githubUsername" value="" placeholder="@yourusername" aria-describedby="UserNameError">
+        <section class="section hidden" aria-live="polite" id="UserNameError">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"/><path fill="currentColor" d="M8.004 10.462V7.596ZM8 5.57v-.042Z"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M8.004 10.462V7.596M8 5.569v-.042"/></svg>
+                <h3 class="text-heading"></h3>
+            </section>    
+        </div>
+            <button type="submit" class="btn-primary">Generate My Ticket</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
