@@ -1,6 +1,5 @@
 document.addEventListener(('DOMContentLoaded'),()=>{
-    let imageURL = sessionStorage.getItem('FileName');
-
+    let imageURL = sessionStorage.getItem('FileImage');
     let link = window.location.search;
     let image = document.querySelector('.img-avatar');
     let queryStringName = new URLSearchParams(link).get('name');

@@ -48,8 +48,8 @@ document.addEventListener(('DOMContentLoaded'),()=>{
         let areFilesValid = updateFiles(fileContainer);
         if(isNameValid && isUserNameValid && isEmailValid && areFilesValid)
         {
-         let file = inputFile.files[0].name;
-         sessionStorage.setItem('FileName', file);
+            let file = inputFile.files[0].name;
+            sessionStorage.setItem('FileImage', file);
          window.location.replace(`http://localhost:3000/mobileticket.html?name=${encodeURIComponent(nameInput.value)}&email=${encodeURIComponent(emailInput.value)}&username=${encodeURIComponent(usernameInput.value)}`);         
         }
     })
